@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Header */
+header {
+    background-color: #222;
+    padding: 15px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+
+/* Hamburger Button */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #222;
+    color: white;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #00bcd4;
+}
+
+
+/* About */
+#about {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Services */
+#services {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #f4f4f4;
+}
+
+#services h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.service-card {
+    display: inline-block;
+    width: 28%;
+    margin: 10px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 15px;
+}
+
+
+/* Portfolio */
+#portfolio {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+#portfolio h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#portfolio p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Testimonials */
+#testimonials {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #f4f4f4;
+}
+
+#testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.testimonial-card {
+    display: inline-block;
+    width: 28%;
+    margin: 10px;
+    padding: 25px 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.testimonial-card p {
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+
+/* Contact */
+#contact {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+#contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    margin: 8px 0;
+    text-align: center;
+}
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #00bcd4;
+}
+
+
+/* Mobile / Tablet */
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+
+    .testimonial-card {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    #contact {
+        padding: 50px 15px;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-top: 15px;
+        align-items: center;
+    }
+}
+
+/* Basic Animations */
+
+.service-card,
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
